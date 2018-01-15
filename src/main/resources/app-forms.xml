@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <bean id="Welcome" class="cn.cerc.sample.forms.FrmWelcome" scope="prototype">
+    </bean>
+    <bean id="FrmWelcome" class="cn.cerc.sample.forms.FrmWelcome" scope="prototype">
+    </bean>
+    <bean id="FrmDefault" class="cn.cerc.sample.forms.FrmDefault" scope="prototype">
+    </bean>
+    <bean id="FrmDataGrid" class="cn.cerc.sample.forms.FrmDataGrid" scope="prototype">
+    </bean>
+    <bean id="FrmClientTest" class="cn.cerc.sample.forms.FrmClientTest" scope="prototype">
+    </bean>
+    <bean id="FrmScanProduct" class="cn.cerc.sample.forms.FrmScanProduct" scope="prototype">
+    </bean>
+    <bean id="FrmInvoicing" class="cn.cerc.sample.forms.FrmInvoicing" scope="prototype">
+    </bean>
+    <bean id="FrmProductShow" class="cn.cerc.sample.forms.part.FrmProductShow" scope="prototype">
+    </bean>
+    <bean id="FrmPurchase" class="cn.cerc.sample.forms.ab.FrmPurchase" scope="prototype">
+    </bean>
+    <bean id="FrmSale" class="cn.cerc.sample.forms.bc.FrmSale" scope="prototype">
+    </bean>
+    <bean id="FrmInventory" class="cn.cerc.sample.forms.ae.FrmInventory" scope="prototype">
+    </bean>
+    <bean id="FrmInAndOut" class="cn.cerc.sample.forms.inAndout.FrmInAndOut" scope="prototype">
+    </bean>
+    
+</beans>

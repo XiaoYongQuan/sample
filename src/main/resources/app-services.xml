@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <import resource="classpath*:jbean-service.xml" />
+    <import resource="classpath*:jmis-service.xml" />
+
+    <!-- rest 配置范例，仅供测试使用 -->
+    <bean id="Hello1" class="cn.cerc.sample.services.HelloWorld" scope="prototype">
+        <property name="restPath" value="get://*/hello" />
+    </bean>
+    <bean id="Hello2" class="cn.cerc.sample.services.HelloWorld" scope="prototype">
+        <property name="restPath" value="get://*/hello?ordNo" />
+    </bean>
+    <bean id="Hello3" class="cn.cerc.sample.services.HelloWorld" scope="prototype">
+        <property name="restPath" value="get://*/hello?ordNo/status" />
+    </bean>
+    <bean id="Hello4" class="cn.cerc.sample.services.HelloWorld" scope="prototype">
+        <property name="restPath" value="get://*/hello?ordNo/status/remark" />
+    </bean>
+    <bean id="Hello5" class="cn.cerc.sample.services.HelloWorld" scope="prototype">
+        <property name="restPath" value="get://*/hello/world?ordNo/status/remark" />
+    </bean>
+
+    <bean id="ServiceLogin" class="cn.cerc.sample.services.ServiceLogin" scope="prototype">
+        <property name="restPath" value="get://*/public/login" />
+    </bean>
+    <bean id="ServiceUserList" class="cn.cerc.sample.services.ServiceUserList" scope="prototype">
+        <property name="restPath" value="get://*/public/users" />
+    </bean>
+    
+    
+    <bean id="SvrProduct.queryProduct" class="cn.cerc.sample.services.part.SvrProduct" scope="prototype">
+    	<property  name="funcCode" value="queryProduct" />
+    </bean>
+    <bean id="SvrProduct.saveProduct" class="cn.cerc.sample.services.part.SvrProduct" scope="prototype">
+    	<property  name="funcCode" value="saveProduct" />
+    </bean>
+    <bean id="SvrProduct.deleteProduct" class="cn.cerc.sample.services.part.SvrProduct" scope="prototype">
+    	<property  name="funcCode" value="deleteProduct" />
+    </bean>
+    <bean id="SvrProduct.findProductByUid" class="cn.cerc.sample.services.part.SvrProduct" scope="prototype">
+    	<property  name="funcCode" value="findProductByUid" />
+    </bean>
+    <bean id="SvrProduct.updateProduct" class="cn.cerc.sample.services.part.SvrProduct" scope="prototype">
+    	<property  name="funcCode" value="updateProduct" />
+    </bean>
+    
+    <bean id="SvrPurchase.queryPurchase" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="queryPurchase" />
+    </bean>
+    <bean id="SvrPurchase.savePurchase" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="savePurchase" />
+    </bean>
+    <bean id="SvrPurchase.saveTranB" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="saveTranB" />
+    </bean>
+    <bean id="SvrPurchase.queryTranbAndH" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="queryTranbAndH" />
+    </bean>
+    <bean id="SvrPurchase.saveUpDateTranH" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="saveUpDateTranH" />
+    </bean>
+    <bean id="SvrPurchase.findTranB" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="findTranB" />
+    </bean>
+    <bean id="SvrPurchase.saveUpDateTranB" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="saveUpDateTranB" />
+    </bean>
+    <bean id="SvrPurchase.deleteTranB" class="cn.cerc.sample.services.ab.SvrPurchase" scope="prototype">
+    	<property  name="funcCode" value="deleteTranB" />
+    </bean>
+    
+    
+    <bean id="SvrSale.querySale" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="querySale" />
+    </bean>
+    <bean id="SvrSale.saveSale" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="saveSale" />
+    </bean>
+    <bean id="SvrSale.queryTranbAndH" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="queryTranbAndH" />
+    </bean>
+    <bean id="SvrSale.saveTranB" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="saveTranB" />
+    </bean>
+    <bean id="SvrSale.saveUpDateTranH" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="saveUpDateTranH" />
+    </bean>
+    <bean id="SvrSale.findTranB" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="findTranB" />
+    </bean>
+    <bean id="SvrSale.saveUpDateTranB" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="saveUpDateTranB" />
+    </bean>
+    <bean id="SvrSale.deleteTranB" class="cn.cerc.sample.services.bc.SvrSale" scope="prototype">
+    	<property  name="funcCode" value="deleteTranB" />
+    </bean>
+    
+    
+    <bean id="SvrInventory.queryInventory" class="cn.cerc.sample.services.ae.SvrInventory" scope="prototype">
+    	<property  name="funcCode" value="queryInventory" />
+    </bean>
+    <bean id="SvrInventory.saveInventory" class="cn.cerc.sample.services.ae.SvrInventory" scope="prototype">
+    	<property  name="funcCode" value="saveInventory" />
+    </bean>
+    <bean id="SvrInventory.queryTranbAndH" class="cn.cerc.sample.services.ae.SvrInventory" scope="prototype">
+    	<property  name="funcCode" value="queryTranbAndH" />
+    </bean>
+    <bean id="SvrInventory.saveTranB" class="cn.cerc.sample.services.ae.SvrInventory" scope="prototype">
+    	<property  name="funcCode" value="saveTranB" />
+    </bean>
+    <bean id="SvrInventory.deleteTranB" class="cn.cerc.sample.services.ae.SvrInventory" scope="prototype">
+    	<property  name="funcCode" value="deleteTranB" />
+    </bean>
+    
+    
+    <bean id="SvrInAndOut.queryDetailed" class="cn.cerc.sample.services.inAndout.SvrInAndOut" scope="prototype">
+    	<property  name="funcCode" value="queryDetailed" />
+    </bean>
+    
+    
+    
+</beans>
