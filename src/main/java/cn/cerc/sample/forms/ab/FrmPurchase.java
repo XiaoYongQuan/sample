@@ -37,7 +37,7 @@ public class FrmPurchase extends AbstractForm {
     }
 
     public IPage addTranH() throws Exception {
-        JspPage jspPage = new JspPage(this, "common/FrmPurchaseTranH_add2222.jsp");
+        JspPage jspPage = new JspPage(this, "common/FrmPurchaseTranH_add11.jsp");
         jspPage.add("tbDate", TDateTime.Now().getDate());
         return jspPage;
     }
